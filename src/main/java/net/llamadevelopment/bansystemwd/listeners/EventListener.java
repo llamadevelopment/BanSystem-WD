@@ -22,10 +22,11 @@ public class EventListener implements Listener {
             if (isBanned) {
                 this.instance.getProvider().getBan(player, ban -> {
                     if (ban.getTime() != -1 && ban.getTime() < System.currentTimeMillis()) {
-                        this.instance.getProvider().unbanPlayer(player, "");
+                        this.instance.getProvider().unbanPlayer(player, "BanSystem/Ban");
                         return;
                     }
-                    event.setCancelReason(Language.getNP("screen.ban", ban.getReason(), ban.getBanID(), this.instance.getProvider().getRemainingTime(ban.getTime())));
+                    //event.setCancelReason(Language.getNP("screen.ban", ban.getReason(), ban.getBanID(), this.instance.getProvider().getRemainingTime(ban.getTime())));
+                    event.getConnection().disconnect(Language.getNP("screen.ban", ban.getReason(), ban.getBanID(), this.instance.getProvider().getRemainingTime(ban.getTime())));
                     event.setCancelled(true);
                 });
             } else {
@@ -45,7 +46,7 @@ public class EventListener implements Listener {
             if (this.instance.getProvider().cachedMutes.get(proxiedPlayer.getName()) != null) {
                 final Mute mute = this.instance.getProvider().cachedMutes.get(proxiedPlayer.getName());
                 if (mute.getTime() < System.currentTimeMillis()) {
-                    this.instance.getProvider().unmutePlayer(mute.getPlayer(), "");
+                    this.instance.getProvider().unmutePlayer(mute.getPlayer(), "BanSystem/Mute");
                     this.instance.getProvider().cachedMutes.remove(mute.getPlayer());
                     return;
                 }

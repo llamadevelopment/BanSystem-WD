@@ -128,7 +128,7 @@ public class Provider {
 
     public final void banPlayer(final String player, final String reason, final String banner, final int seconds) {
         CompletableFuture.runAsync(() -> {
-            long end = System.currentTimeMillis() + seconds + 1000L;
+            long end = System.currentTimeMillis() + seconds * 1000L;
             if (seconds == -1) end = -1;
             final String id = this.getRandomIDCode(5);
             final String date = this.getDate();
@@ -155,7 +155,7 @@ public class Provider {
 
     public final void mutePlayer(final String player, final String reason, final String banner, final int seconds) {
         CompletableFuture.runAsync(() -> {
-            long end = System.currentTimeMillis() + seconds + 1000L;
+            long end = System.currentTimeMillis() + seconds * 1000L;
             if (seconds == -1) end = -1;
             final String id = this.getRandomIDCode(5);
             final String date = this.getDate();
@@ -166,7 +166,7 @@ public class Provider {
                     .append("banner", banner)
                     .append("date", date)
                     .append("time", end);
-            this.mutelogCollection.insert(document);
+            this.muteCollection.insert(document);
 
             final Mute mute = new Mute(player, reason, id, banner, date, end);
             this.createMutelog(mute);
