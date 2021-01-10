@@ -3,7 +3,7 @@
 Many new features and code improvements!\
 This Plugin only supports Waterdog Proxy (latest).
 
-> * Download the latest version here: [Download]()
+> * Download the latest version here: [Download](https://github.com/llamadevelopment/BanSystem-WD/releases/tag/2.5.0)
 
 ### Join our Discord: 
 [![d](https://img.shields.io/discord/323953253458903040.svg)](https://discord.gg/Qcuv2f6)
@@ -29,7 +29,7 @@ This Plugin only supports Waterdog Proxy (latest).
 
 ## Installation
 
-1. [Download]() the .jar file.
+1. [Download](https://github.com/llamadevelopment/BanSystem-WD/releases/tag/2.5.0) the .jar file.
 2. Paste the file into your plugin folder.
 3. Start your server.
 4. And have fun using BanSystem.
