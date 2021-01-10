@@ -1,0 +1,5 @@
+name: BanSystem-WD
+version: 1.0.0-SNAPSHOT
+author: Mundschutziii
+main: net.llamadevelopment.bansystemwd.BanSystemWD
+description: An advanced punishment tool for WaterDog

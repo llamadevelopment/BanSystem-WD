@@ -1,0 +1,135 @@
+Provider: Yaml
+
+MySql:
+  Host: "127.0.0.1"
+  Port: "3306"
+  Database: "bansystem"
+  User: "root"
+  Password: "this_cord.discord"
+
+MongoDB:
+  Uri: "URI_LINK"
+  Database: "bansystem"
+
+Reasons:
+  BanReasons:
+    "1":
+      Reason: "Hacking"
+      Seconds: 287378
+    "2":
+      Reason: "Bugusing"
+      Seconds: 398347
+    "3":
+      Reason: "Skin/Name"
+      Seconds: 937342
+    "4":
+      Reason: "Insult"
+      Seconds: 3893784
+    "5":
+      Reason: "Teaming"
+      Seconds: 8478473
+  MuteReasons:
+    "1":
+      Reason: "Insult"
+      Seconds: 287378
+    "2":
+      Reason: "Advertising"
+      Seconds: 398347
+    "3":
+      Reason: "Spamming"
+      Seconds: 937342
+    "4":
+      Reason: "Caps"
+      Seconds: 3893784
+
+WarnSystem:
+  EnableBan: false
+  MaxWarningCount: 5
+  BanReason: "Too many warnings"
+  BanSeconds: -1
+
+Commands:
+  BanCommand:
+    Name: "ban"
+    Permission: "bansystem.command.ban"
+    Aliases: [ "pban" ]
+  BanlogCommand:
+    Name: "banlog"
+    Permission: "bansystem.command.banlog"
+    Aliases: [ "blog", "banhistory" ]
+  CheckbanCommand:
+    Name: "checkban"
+    Permission: "bansystem.command.checkban"
+    Aliases: [ "cban" ]
+  CheckmuteCommand:
+    Name: "checkmute"
+    Permission: "bansystem.command.checkmute"
+    Aliases: [ "cmute" ]
+  ClearbanlogCommand:
+    Name: "clearbanlog"
+    Permission: "bansystem.command.clearbanlog"
+    Aliases: [ "cblog" ]
+  ClearmutelogCommand:
+    Name: "clearmutelog"
+    Permission: "bansystem.command.clearmutelog"
+    Aliases: [ "cmlog" ]
+  ClearwarningsCommand:
+    Name: "clearmutelog"
+    Permission: "bansystem.command.clearwarnings"
+    Aliases: [ "cwlog" ]
+  DeletebanCommand:
+    Name: "deleteban"
+    Permission: "bansystem.command.deleteban"
+    Aliases: [ "dban", "removeban" ]
+  DeletemuteCommand:
+    Name: "deletemute"
+    Permission: "bansystem.command.deletemute"
+    Aliases: [ "dmute", "removemute" ]
+  DeletewarnCommand:
+    Name: "deletewarn"
+    Permission: "bansystem.command.deletewarn"
+    Aliases: [ "dwarn", "removewarn" ]
+  EditbanCommand:
+    Name: "editban"
+    Permission: "bansystem.command.editban"
+    Aliases: [ "eban" ]
+  EditmuteCommand:
+    Name: "editmute"
+    Permission: "bansystem.command.editmute"
+    Aliases: [ "emute" ]
+  KickCommand:
+    Name: "kick"
+    Permission: "bansystem.command.kick"
+    Aliases: [ "pkick" ]
+  MuteCommand:
+    Name: "mute"
+    Permission: "bansystem.command.mute"
+    Aliases: [ "pmute" ]
+  MutelogCommand:
+    Name: "mutelog"
+    Permission: "bansystem.command.mutelog"
+    Aliases: [ "mlog", "mutehistory" ]
+  TempbanCommand:
+    Name: "tempban"
+    Permission: "bansystem.command.tempban"
+    Aliases: [ "tban" ]
+  TempmuteCommand:
+    Name: "tempmute"
+    Permission: "bansystem.command.tempmute"
+    Aliases: [ "tmute" ]
+  UnbanCommand:
+    Name: "unban"
+    Permission: "bansystem.command.unban"
+    Aliases: [ "uban", "cancelban" ]
+  UnmuteCommand:
+    Name: "unmute"
+    Permission: "bansystem.command.unmute"
+    Aliases: [ "umute", "cancelmute" ]
+  WarnCommand:
+    Name: "warn"
+    Permission: "bansystem.command.warn"
+    Aliases: [ "pwarn" ]
+  WarnlogCommand:
+    Name: "warnlog"
+    Permission: "bansystem.command.warnlog"
+    Aliases: [ "wlog", "warnhistory" ]
